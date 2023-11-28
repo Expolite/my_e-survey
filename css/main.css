@@ -1,0 +1,259 @@
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* Default font use (optional) */
+    font-family: "Lato", sans-serif;
+}
+
+/*
+########################################################################################################################
+#
+#
+# SIDEBAR
+#
+#
+########################################################################################################################
+*/
+
+.side_nav {
+    height: 100%;
+    /* width: 200px; */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 50px;
+}
+
+/* items label ############################*/
+.side_nav .sd_itemList {
+    /* border: 1px solid red; */
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    transition: 0.3s;
+}
+
+.side_nav .sd_itemList:hover {
+    color: #f1f1f1;
+}
+/*##########################################
+#
+#
+#
+items Icons ############################*/
+.side_nav .sd_itemIcons {
+    /* border: 1px solid red; */
+    padding: 8px 8px 8px 12px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    transition: 0.3s;
+}
+
+.side_nav .sd_itemIcons:hover {
+    color: #f1f1f1;
+}
+/*##########################################*/
+
+.side_nav .closebtn {  /* Button - close */
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    /* border: 1px solid red; */
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #818181;
+    transition: 0.5s;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.side_nav .open_nav {  /* Button - open */
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    /* border: 1px solid red; */
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #818181;
+    transition: 0.5s;
+    font-size: 20px;
+    display: block;
+    cursor: pointer;  
+}
+
+
+
+
+
+/*
+########################################################################################################################
+#
+#
+# BODY
+#
+#
+########################################################################################################################
+*/
+
+
+#main_body {
+    transition: margin-left .5s;
+    /* margin-left: 200px; */
+    border: 1px solid black;
+}
+
+
+
+.myNavbar {
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.myNavbar .navTitle {
+    font-size: 18px;
+    padding-top: 3px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+
+/* navbar items */
+.myNavbar .navbar_lu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.myNavbar .navbar_li {
+    display: inline;
+    /* border: 1px solid white; */
+}
+
+.myNavbar .navbar_li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.myNavbar .navbar_li a:hover {
+    color: black;
+}
+
+.myNavbar .navbar_li .extraSpace_navbar {
+    padding-left: 10px;
+}
+
+.navbarLogout {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 15px;
+    padding: 0 6px;
+    position: relative;
+}
+.navbarLogout:hover {
+    color: black;
+}
+
+.tooltip_logout {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    padding: 1px 5px;
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: -60px;
+}
+.navbarLogout:hover .tooltip_logout {
+    display: block;
+}
+
+
+/* Page title */
+.page_title {
+    border-bottom: 2px solid #CBCBCB;
+    font-size: 30px;
+    color: black;
+    padding: 0 5px;
+    /* Horizontal   Vertical    Blur  Color*/
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*
+########################################################################################################################
+#
+#
+# 
+#
+#
+########################################################################################################################
+*/
+
+/* change Sidebar based on layout */
+#mySidenav { width: 200px; }
+#main_body { margin-left: 200px; }
+
+/* Buttons */
+#open_sidebar { display: none; }
+#close_btn { display: block; }
+
+/* items */
+.side_nav .sd_itemList { display: block; }
+.side_nav .sd_itemIcons { display: none; }
+
+/* navbar option */
+#navbar_option { 
+    padding: 0 10px;
+    font-size: 15px;
+    text-align: right;
+    cursor: pointer;
+    display: none; 
+}
+#navbar_option:hover {
+    color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Sidebar btn */
+    #open_sidebar { display: block; }
+    #close_btn { display: none; }
+
+    /* Sidebar layouts */
+    #mySidenav { width: 50px; }
+    #main_body { margin-left: 50px; }
+    .myNavbar .navbar_lu { display: none; }
+
+    /* items */
+    .side_nav .sd_itemList { display: none; }
+    .side_nav .sd_itemIcons { display: block; }
+
+    /* Navbar right contents - vertical */
+    .myNavbar .navbar_li { 
+        display: block; 
+        padding-right: 5px;
+    }
+
+    /* navbar option */
+    #navbar_option { display: block; }
+
+    /* extra space */
+    .myNavbar .navbar_li .extraSpace_navbar { display: none; }
+}

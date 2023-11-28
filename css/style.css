@@ -1,0 +1,130 @@
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* Default font use (optional) */
+    font-family: "Lato", sans-serif;
+}
+
+/*
+########################################################################################################################
+#
+#
+# SIDEBAR
+#
+#
+########################################################################################################################
+*/
+
+.side_nav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* items label ############################*/
+.side_nav .sd_itemList {
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side_nav .sd_itemList:hover {
+    color: #f1f1f1;
+}
+/*##########################################
+#
+#
+#
+items Icons ############################*/
+.side_nav .sd_itemIcons {
+    padding: 8px 8px 8px 12px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side_nav .sd_itemIcons:hover {
+    color: #f1f1f1;
+}
+/*##########################################*/
+
+.side_nav .closebtn {  /* Button - close */
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #818181;
+    transition: 0.5s;
+    font-size: 30px;
+    display: block;
+    cursor: pointer;
+}
+
+.side_nav .open_nav {  /* Button - open */
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #818181;
+    transition: 0.5s;
+    font-size: 25px;
+    display: block;
+    cursor: pointer;  
+}
+
+/*
+########################################################################################################################
+#
+#
+# BODY
+#
+#
+########################################################################################################################
+*/
+
+
+#main_body {
+    transition: margin-left .5s;
+    margin-left: 250px;
+    border: 1px solid black;
+}
+
+
+
+.myNavbar {
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+/*
+########################################################################################################################
+#
+#
+# SIDEBAR
+#
+#
+########################################################################################################################
+*/
